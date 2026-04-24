@@ -1,0 +1,39 @@
+1. Qué es HTML, cuando fue creado, cuáles fueron las distintas versiones y cuál es la última?
+
+HTML (HyperText Markup Language) es el lenguaje de marcado principal de la World Wide Web. Fue diseñado como un lenguaje para describir semánticamente documentos científicos, pero con el tiempo se adaptó para describir otros tipos de documentos e incluso aplicaciones.
+Se creo en 1990, hasta 1995 pasó por sus primeras revisiones alojadas en el CERN y luego en el IETF. Las versiones más relevantes fueron: un intento frustrado con HTML 3.0 en 1995, seguido por HTML 3.2 (completado en 1997) y HTML 4.01 (también en 1997). Paralelamente el W3C trabajó en XHTML 1.0 (año 2000) y luego en XHTML 2.0, que nunca llegó a consolidarse. En 2004, Apple, Mozilla y Opera formaron el grupo WHATWG para continuar evolucionando HTML, lo que derivó en HTML5. En 2006 el W3C se sumó al proceso, y en 2012 se presentó un nuevo equipo de edición para producir la Recomendación HTML 5.0. La versión actual y vigente es HTML5, que el WHATWG mantiene como un "living standard" (estándar vivo) en continua actualización.
+
+2. ¿Cuáles son los principios básicos que el W3C recomienda seguir para la creación de documentos con HTML?
+
+Separar estructura y presentación
+El HTML tiene sus raíces en SGML, que siempre ha sido un lenguaje para la especificación de código estructural. A medida que el HTML madura, un número cada vez mayor de sus elementos y atributos presentacionales ha sido reemplazado por otros mecanismos, en particular las hojas de estilo. La experiencia ha demostrado que separando la estructura de un documento de sus aspectos presentacionales se reduce el coste de servir a un amplio espectro de plataformas, medios, etc. y se facilitan las revisiones del documento.
+
+Considerar la accesibilidad universal a la Web
+Para hacer la Web más accesible a todos, en especial a aquéllos con discapacidades, los autores deberían considerar cómo pueden representarse sus documentos en diferentes plataformas: navegadores basados en voz, lectores braille, etc. El HTML ofrece un número de mecanismos con este fin (p.ej., el atributo alt, el atributo accesskey, etc.)
+
+Además de esto, los documentos pueden llegar a una audiencia muy lejana con diferentes computadoras y configuraciones. Para que los documentos sean correctamente interpretados, los autores deberían incluir en sus documentos información sobre el idioma natural y la dirección del texto, cómo está codificado el documento, y otras cuestiones relacionadas con la internacionalización.
+
+Ayudar a los agentes de usuario con la representación incremental
+Mediante un diseño cuidadoso de las tablas y haciendo uso de las nuevas características de las tablas de HTML 4, los autores pueden ayudar a los agentes de usuario a representar los documentos más rápidamente. 
+
+3. En las Especificaciones de HTML, ¿cuándo un elemento o atributo se considera desaprobado? ¿y obsoleto?
+
+Desaprobado: un elemento o atributo es desaprobado cuando existe una alternativa mejor o más moderna para lograr el mismo efecto. Los elementos desaprobados aún son reconocidos y procesados por los agentes de usuario (navegadores), pero se desaconseja su uso. Se incluyen en la especificación por razones de compatibilidad, pero se espera que desaparezcan en versiones futuras.
+Obsoleto (obsolete): un elemento o atributo es obsoleto cuando ya no forma parte de la especificación vigente y los agentes de usuario no están obligados a soportarlo. A diferencia de los desaprobados, los elementos obsoletos pueden ser directamente ignorados o producir comportamientos imprevisibles en los navegadores modernos.
+
+4. Qué es el DTD y cuáles son los posibles DTDs contemplados en la especificación de HTML 4.01?
+
+El DTD (Document Type Definition / Declaración de Tipo de Documento) es un mecanismo que indica qué versión y qué conjunto de reglas sigue un documento HTML. Se coloca en la primera línea del archivo, antes de la etiqueta <html>, y permite que el navegador sepa cómo interpretar el marcado.
+
+La especificación HTML 4.01 contempla tres DTDs posibles:
+ - DTD Estricto
+ - DTD Transicional 
+-  DTD Frameset
+
+5. Qué son los metadatos y cómo se especifican en HTML?
+
+Los metadatos son información sobre el documento que no forma parte del contenido visible.
+Se incluyen en la sección <head> del documento.
+Se especifican principalmente con la etiqueta <meta>, que permite declarar: codificación de caracteres ,descripción del documento
+, palabras clave, información del autor.
+
