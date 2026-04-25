@@ -1,0 +1,63 @@
+3.a)
+<a href="http://www.google.com.ar">Click aquí para ir a Google</a> --> Se ve la palabra Click aquí para ir a Google, y al hacer click abre Google en la misma pestaña.
+
+<a href="http://www.google.com.ar" target="_blank">Click aquí para ir a Google</a> --> = que el anterior pero abre google en otra pestaña
+
+<a href="http://www.google.com.ar" type="text/html" hreflang="es" charset="utf-8" rel="help"> --> no se ve
+
+<a href="#">Click aquí para ir a Google</a> --> Se ve Click aquí para ir a Google pero no redirecciona a nada.
+
+<a href="#arriba">Click aquí para volver arriba</a> -->  Se ve Click aquí para volver arriba y al clickearlo lleva al punto de la página donde está definida el ancla "arriba".
+
+<a name="arriba" id="arriba"></a> --> es el ancla, no muestra nada pero marca la posicion de la pagina a donde va el linhk anterior.
+
+Ah, o sea querés que yo te escriba los puntos 3.b al 3.k con un estilo natural de estudiante, como el ejemplo que me mostraste. Ahora entiendo, vamos:
+
+3.b)
+<p><img src="im1.jpg" alt="imagen1" /><a href="http://www.google.com.ar">Click aquí</a></p> --> Muestra la imagen y al lado el texto Click aquí como enlace. Y el texto lleva a Google, la imagen no se puede clickear.
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> Click aquí</p> --> Muestra la imagen y esta es clickeable y lleva a Google, pero el texto Click aquí está afuera del enlace así que no redirige a ningún lado.
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" />Click aquí</a></p> --> Tanto la imagen como el texto están dentro del enlace, entonces los dos son clickeables y llevan a Google.
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> <a href="http://www.google.com.ar">Click aquí</a></p> --> Hay dos enlaces separados que van al mismo destino. La imagen es clickeable y el texto también, pero son dos elementos distintos.
+
+3.c)
+<ul> <li>xxx</li> <li>yyy</li> <li>zzz</li> </ul> --> Muestra una lista desordenada, es decir con viñetas adelante de cada ítem.
+
+<ol> <li>xxx</li> <li>yyy</li> <li>zzz</li> </ol> --> Muestra una lista ordenada, los ítems aparecen numerados 1, 2, 3 automáticamente.
+
+<ol><li>xxx</li></ol> <ol><li value="2">yyy</li></ol> <ol><li value="3">zzz</li></ol> --> Son tres listas ordenadas separadas. Con el atributo value se fuerza el número de cada ítem, entonces se ve 1. xxx / 2. yyy / 3. zzz igual que la lista anterior, pero en el código son tres listas distintas.
+
+<blockquote><p>1. xxx<br />2. yyy<br />3. zzz</p></blockquote> -->  No es una lista HTML, es texto escrito dentro de un bloque con sangría.
+
+3.d)
+Primera tabla: usa etiquetas <th> para los encabezados, lo que hace que el navegador los muestre automáticamente en negrita y centrados.
+
+Segunda tabla: Es igual a la 1, pero semánticamente no tiene encabezados reales.
+
+3.e)
+Primera tabla: usa la etiqueta <caption> que es la forma correcta de ponerle un título a una tabla.
+Segunda tabla: simula el título usando una celda <td colspan="3"> que abarca todo el ancho de la tabla. Visualmente se ve parecido pero no es un título real, es simplemente una celda que ocupa toda la fila.
+
+3.f)
+Primera tabla: usa rowspan="2" en una celda, lo que hace que esa celda ocupe dos filas hacia abajo. La columna de la izquierda queda más alta que las demás.
+Segunda tabla: usa colspan="2" en una celda, lo que hace que esa celda ocupe dos columnas hacia la derecha. En la segunda fila hay una celda ancha y una normal.
+
+3.g)
+Primera tabla: combina colspan="2" y rowspan="2" en la misma celda, haciendo que ocupe 2 columnas y 2 filas al mismo tiempo.
+Segunda tabla: agrega cellpadding="0" y cellspacing="0", lo que elimina el espacio interior de las celdas y el espacio entre ellas. Las celdas quedan mucho más juntas y sin márgenes.
+
+3.h)
+Form 1: usa method="post" entonces los datos viajan ocultos en la solicitud. El action manda los datos a un archivo PHP. Tiene <fieldset> y <legend> para agrupar los campos visualmente, el campo clave es type="password" así que los caracteres se ocultan, y el botón es type="submit" que envía el formulario.
+Form 2: usa method="get" entonces los datos viajan visibles en la URL. No tiene action definido. No usa fieldset. El campo clave es type="text" así que la contraseña se ve en texto plano. Usa <label> correctamente asociado a cada input.
+Form 3: el action es mailto:xx@xx.com entonces los datos se envían por correo electrónico. El botón dice "Enviar" pero es type="reset", lo que significa que en realidad borra los campos en vez de enviar el formulario.
+
+3.i)
+Botón 1: usa la etiqueta <button> para poner contenido HTML adentro, en este caso una imagen y texto en negrita. 
+Botón 2: usa <input type="button"> que solo puede mostrar texto plano definido en el atributo value. No puede tener imágenes ni etiquetas HTML adentro.
+
+3.j)
+Primer caso: los dos radio buttons tienen el mismo name="opcion", solo se puede seleccionar uno a la vez.
+Segundo caso: cada radio button tiene un name distinto (opcion1 y opcion2), entonces pertenecen a grupos diferentes y se pueden seleccionar los dos al mismo tiempo.
+
+3.k)
+Primera lista (select name="lista"): es una lista desplegable simple donde solo se puede elegir una opción a la vez. Los <optgroup> agrupan las opciones visualmente pero no cambian el comportamiento.
+Segunda lista (select name="lista[]" multiple="multiple"): el atributo multiple permite seleccionar varias opciones a la vez manteniendo Ctrl o Shift. El name con corchetes indica que va a enviar un array de valores al servidor.
