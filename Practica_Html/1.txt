@@ -34,6 +34,5 @@ La especificación HTML 4.01 contempla tres DTDs posibles:
 
 Los metadatos son información sobre el documento que no forma parte del contenido visible.
 Se incluyen en la sección <head> del documento.
-Se especifican principalmente con la etiqueta <meta>, que permite declarar: codificación de caracteres ,descripción del documento
-, palabras clave, información del autor.
+Se especifican principalmente con la etiqueta <meta>, que permite declarar: codificación de caracteres ,descripción del documento, palabras clave, información del autor.
 

@@ -1,0 +1,101 @@
+2.a)
+<!-- Código controlado el día 12/08/2009 →
+
+Sección: Puede ir en cualquier parte del documento.
+Efecto: Es un comentario, el navegador lo ignora completamente y no lo muestra. 
+Elementos y atributos: No tiene etiquetas ni atributos. 
+
+
+2.b)
+<div id="bloque1">Contenido del bloque1</div>
+
+Sección: <body>
+Efecto: Crea un contenedor de bloque que agrupa contenido. 
+Elemento: <div> </div>(etiqueta de apertura y cierre)
+Atributo id con valor "bloque1" (identifica el elemento de forma única en la página). No obligatorio
+
+2.c)
+<img src="" alt="lugar imagen" id="im1" name="im1" width="32" height="32"
+longdesc="detalles.htm" />
+
+Sección: <body>
+Efecto: Inserta una imagen. Como src está vacío, no muestra ninguna imagen, por lo que muestra el texto alternativo "lugar imagen".
+Elemento vacío: <img /> 
+Atributos:
+src="" es la ruta de la imagen. Obligatorio
+alt="lugar imagen" es eltexto alternativo si la imagen no carga. Obligatorio
+id="im1" es un identificador único. No obligatorio
+name="im1" es el nombre del elemento. No obligatorio
+width="32" representa el ancho. No obligatorio
+height="32" representa el alto. No obligatorio
+longdesc="detalles.htm" es el enlace a la descripción larga de la imagen. No obligatorio
+
+2.d)
+<meta name="keywords" lang="es" content="casa, compra, venta, alquiler " />
+<meta http-equiv="expires" content="16-Sep-2019 7:49 PM" />
+
+Sección: <head>
+Efecto:
+La primera línea define palabras clave en español para que los motores de búsqueda indexen la página.
+La segunda define una fecha de expiración del documento.
+
+Elemento vacío: <meta /> 
+Atributos:
+name="keywords" es el tipo de metadato. . No obligatorio
+lang="es" indica el idioma del contenido. . No obligatorio
+content="..."  el valor del metadato. Obligatorio por que se usa name y http-equiv
+http-equiv="expires" equivale a una cabecera HTTP.  No obligatorio
+
+2.e)
+<a href="http://www.e-style.com.ar/resumen.html" type="text/html" hreflang="es" charset="utf-8"
+rel="help">Resumen HTML </a>
+
+Sección: <body>
+Efecto: Crea un hipervínculo con el texto "Resumen HTML" que lleva a la URL indicada. Los atributos extra aportan información adicional sobre el destino.
+Elemento: <a> con etiqueta de apertura y cierre
+Atributos:
+href="..." la URL de destino. Obligatorio para que funcione como enlace
+type="text/html" tipo MIME del recurso enlazado. No obligatorio
+hreflang="es" el idioma del documento destino. No obligatorio
+charset="utf-8" la codificación del documento destino (obsoleto en HTML5). No obligatorio
+rel="help" cual es la relación entre la página actual y el destino. No obligatorio
+
+2.f)
+<table width="200" summary="Datos correspondientes al ejercicio vencido">
+<caption align="top"> Título </caption>
+<tr>
+<th scope="col">&nbsp;</th>
+<th scope="col">A</th>
+<th scope="col">B</th>
+<th scope="col">C</th>
+</tr>
+<tr>
+<th scope="row">1º</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th scope="row">2º</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+
+Sección: <body>
+Efecto: Crea una tabla de 3 filas × 4 columnas con un título arriba. La primera fila y la primera columna son encabezados. Las celdas contienen espacios en blanco.
+Elementos:
+<table> </table> es el contenedor principal de la tabla
+<caption align="top">  </caption> es el título de la tabla, posicionado arriba. No obligatorio
+<tr> </tr> es una fila de la tabla. No tiene atributos en este ejemplo
+<th scope="col"> </th> --> celda de encabezado de columna. 
+<th scope="row"> </th> --> celda de encabezado de fila
+<td></td>  celda de dato. No obligatorio 
+
+Atributos:
+&nbsp; --> entidad que representa un espacio en blanco.
+width="200" indica el ancho. No obligatorio
+summary="..." la descripción para accesibilidad. No obligatorio
+scope="col"  indica si el encabezado es de  columna. No obligatorio
+scope="row"  indica si el encabezado es de fila . No obligatorio
