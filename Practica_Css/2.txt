@@ -1,0 +1,53 @@
+Ejercicio 2
+Analizar el siguiente código señalando declaraciones y aplicaciones de reglas, y su efecto.
+
+p#normal {
+font-family: arial,helvetica;
+font-size: 11px;
+font-weight: bold;
+}
+
+Regla: 
+  p#normal{...} selector: p#normal.
+Declaraciones:
+  font-family: arial,helvetica; define la familia de fuente a arial, helvetica.
+  font-size: 11px; define el tamaño de la letra a 11px.
+  font-weight: bold; pone la letra en negrita.
+Efecto: aplica sobre el elemento parrafo con id normal los estilos anteriormente mencionados. En este caso afecta a <p id="normal">Este es un párrafo</p> .
+
+
+*#destacado {
+border-style: solid;
+border-color: blue;
+border-width: 2px;
+}
+
+Regla:
+  *#destacado{...} selector: *#destacado, selector universal + id.
+Declaraciones: 
+  border-style: solid; define el estilo del borde como sólido.
+  border-color: blue; define el color del borde como azul.
+  border-width: 2px; define el grosor del borde a 2px.
+Efecto: aplica sobre cualquier elemento con id="destacado" los estilos anteriormente mencionados. En este caso afecta tanto al <p id="destacado"> como al <table id="destacado">, ya que el selector universal * no distingue el tipo de elemento.
+
+
+#distinto {
+background-color: #9EC7EB;
+color: red;
+}
+
+Regla:
+  #distinto{...} selector: #distinto
+Declaraciones:
+  background-color: #9EC7EB; define el color de fondo como celeste.
+  color: red; define el color del texto como rojo.
+Efecto: aplica sobre cualquier elemento con id="distinto" los estilos anteriormente mencionados. En este caso afecta al <p id="distinto">.
+
+
+<p id="normal">Este es un párrafo</p>
+
+<p id="destacado">Este es otro párrafo</p>
+
+<table id="destacado"><tr><td>Esta es una tabla</td></tr></table>
+
+<p id="distinto">Este es el último párrafo</p>

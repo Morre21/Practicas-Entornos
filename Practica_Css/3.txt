@@ -1,0 +1,56 @@
+Analizar el siguiente código señalando declaraciones y aplicaciones de reglas, y su efecto.
+
+p.quitar {
+color: red;
+}
+
+Regla:
+p.quitar{...} selector: p.quitar
+Declaraciones:
+  color: red; define el color del texto como rojo.
+Efecto: aplica sobre los elementos párrafo que tengan class="quitar" los estilos anteriormente mencionados. En este caso afecta a <p class="quitar">Este párrafo debe ser quitado de la obra…</p> y a <p class="quitar importante">Se pueden aplicar varias clases a la vez</p>. No afecta al <h1 class="quitar"> porque el selector especifica solo elementos p.
+
+*.desarrollo {
+font-size: 8px;
+}
+
+Regla:
+*.desarrollo{...} selector: *.desarrollo.
+Declaraciones:
+  font-size: 8px; define el tamaño de la letra a 8px.
+Efecto: aplica sobre cualquier elemento que tenga class="desarrollo" los estilos anteriormente mencionados. En este caso afecta a <p class="desarrollo">En este primer párrafo trataremos lo siguiente…</p>.
+
+.importante {
+font-size: 20px;
+}
+
+Regla:
+.importante{...} selector: .importante, selector de clase.
+Declaraciones:
+font-size: 20px; define el tamaño de la letra a 20px.
+Efecto: aplica sobre cualquier elemento que tenga class="importante" los estilos anteriormente mencionados. En este caso afecta a <p class="importante">Y este es el párrafo más importante…</p> y a <p class="quitar importante">Se pueden aplicar varias clases a la vez</p>.
+
+
+<p class="desarrollo">
+En este primer párrafo trataremos lo siguiente:
+<br />xxxxxxxxxxxxxxxxxxxxxxxxx
+</p>
+
+<p class="quitar">
+Este párrafo debe ser quitado de la obra…
+<br />xxxxxxxxxxxxxxxxxxxxxxxxx
+</p>
+
+<p >
+En este otro párrafo trataremos otro tema:<br />
+xxxxxxxxxxxxxxxxxxxxxxxxx
+</p>
+
+<p class="importante">
+Y este es el párrafo más importante de la obra…
+<br />xxxxxxxxxxxxxxxxxxxxxxxxx
+</ p>
+
+<h1 class="quitar">Este encabezado también debe ser quitado de la obra</h1>
+
+<p class="quitar importante">Se pueden aplicar varias clases a la vez</p> --> En esta linea recibe dos reglas a la vez, p.quitar e .importante.
