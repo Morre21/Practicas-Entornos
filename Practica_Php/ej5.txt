@@ -1,0 +1,9 @@
+El ejercicio implementa un contador de visitas usando tres archivos. Como PHP no guarda nada entre una visita y otra, guardamos el numero en un archivo de texto externo.
+
+los archivos son los siguientes: 
+
+contador.dat: Es un archivo .dat donde solo se persiste el número de visitas. Arranca en 0 y PHP lo actualiza automáticamente en cada visita.
+
+contador.php: Es la lógica del contador. Abre el archivo, lee el número actual, le suma 1, guarda el nuevo valor y lo muestra en pantalla. Lo abre dos veces una en modo lectura ("r") primero y modo escritura ("w") después.
+
+visitas.php: Es un HTML básico para ver la "pagina" que con un include ejecuta contador.php cada vez que alguien la carga.

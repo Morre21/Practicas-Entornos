@@ -1,0 +1,47 @@
+1) 
+
+<?php
+function doble($i) {
+ return $i*2;
+}
+$a = TRUE;    
+$b = "xyz";
+$c = 'xyz';
+$d = 12;
+echo gettype($a);
+echo gettype($b);
+echo gettype($c);
+echo gettype($d);
+if (is_int($d)) {
+ $d += 4;
+}
+if (is_string($a)) {
+ echo "Cadena: $a";
+}
+$d = $a ? ++$d : $d*3;
+$f = doble($d++);
+$g = $f += 10;
+echo $a, $b, $c, $d, $f , $g;
+?>
+
+Las variables y sus tipos son:
+$a (Boolean), 
+$b, $c (string)
+$d,$f,$g, $i (integer)
+
+Operadores:
+Unarios: ++
+Binario: *, *=, =
+Ternario: ?:
+
+Funciones y parámetros:
+doble($i) --> parámetro $i, retorna $i * 2
+gettype($a), gettype($b), gettype($c), gettype($d) --> funcion de php, recibe una variable
+is_int($d) --> parametro $d
+is_string($a)  --> parametro $a
+
+Estructuras de control:
+if (is_int($d)) 
+if (is_string($a)) 
+
+salida en pantalla: booleanstringstringinteger1xyzxyz184444
